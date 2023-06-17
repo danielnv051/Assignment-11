@@ -4,10 +4,17 @@ class Complex_Number:
         self.x = xx
         self.y = yy
 
-    # sum & sub two complex number
+    # sum two complex number
     def sum(self, Cn):
         sum_x = self.x + Cn.x
         sum_y = self.y + Cn.y
+        c_n = Complex_Number(sum_x, sum_y)
+        return c_n
+    
+    # sub two complex number
+    def sub(self, Cn):
+        sum_x = self.x - Cn.x
+        sum_y = self.y - Cn.y
         c_n = Complex_Number(sum_x, sum_y)
         return c_n
     
@@ -28,7 +35,7 @@ class Complex_Number:
 cn1 = Complex_Number(7,4)
 cn1.show()
 
-cn2 = Complex_Number(5,4)
+cn2 = Complex_Number(5,3)
 cn2.show()
 
 cn3 = cn1.sum(cn2)
@@ -36,3 +43,6 @@ cn3.show()
 
 cn4 = cn1.mul(cn2)
 cn4.show()
+
+cn5 = cn1.sub(cn2)
+cn5.show()
